@@ -1,0 +1,20 @@
+country_name,country_code,region_group
+United Kingdom,GB,Anchor Market
+Switzerland,CH,Anchor Market
+Ireland,IE,Anchor Market
+Germany,DE,Western Europe
+France,FR,Western Europe
+Netherlands,NL,Western Europe
+Austria,AT,Western Europe
+Belgium,BE,Western Europe
+Portugal,PT,Southern Europe
+Spain,ES,Southern Europe
+Italy,IT,Southern Europe
+Greece,GR,Southern Europe
+Poland,PL,Eastern Europe
+Romania,RO,Eastern Europe
+Hungary,HU,Eastern Europe
+Czechia,CZ,Eastern Europe
+Sweden,SE,Nordics
+Denmark,DK,Nordics
+Finland,FI,Nordics
