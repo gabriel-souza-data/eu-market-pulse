@@ -24,32 +24,37 @@ This project answers that trade-off directly, scoring 19 European countries acro
 
 ## Pipeline Overview
 
+```
 Eurostat API (3 datasets)
-↓
+        ↓
 Python: fetch, clean, merge (pandas)
-↓
+        ↓
 Supabase (PostgreSQL): countries / market_indicators / country_kpis
-↓
+        ↓
 GitHub Actions: automated weekly refresh
-↓
+        ↓
 Streamlit: public dashboard
+```
 
-## All three data sources (HICP inflation rate, price level indices, house price index) are fetched directly from Eurostat's public API — no manual downloads in the production pipeline.
+All three data sources (HICP inflation rate, price level indices, house price index) are fetched directly from Eurostat's public API — no manual downloads in the production pipeline. Because the underlying data refreshes weekly, country rankings shown in the live dashboard reflect the latest available figures rather than a fixed snapshot.
 
-## Key Findings
+## What the Dashboard Reveals
 
-- **Italy, Finland, and Romania** lead the expansion ranking — each for a different reason: Italy offers balance across all three dimensions, Finland benefits from falling housing costs, and Romania combines very low cost of living with a stronger inflation risk.
-- **No country in the sample is both cheap and highly stable** — the "ideal quadrant" (low cost + high inflation stability) is empty, meaning any expansion decision involves a genuine trade-off.
-- **Portugal is a cautionary case**: it scores well on cost of living, but has the sharpest housing price growth in the sample (+95% since 2016) — a signal that today's affordability may not hold going forward.
+Rather than listing a fixed ranking here — which would go stale as the pipeline refreshes weekly with new Eurostat data — this section describes the kind of insight the scoring is designed to surface. The live dashboard always reflects the current state:
+
+- **A ranked Expansion Score** for all 19 countries, combining cost of living, inflation stability, and housing pressure into one comparable number.
+- **Trade-off patterns** — for example, whether the cheapest countries in a given period are also the least stable, or whether any country combines both low cost and strong stability.
+- **Housing risk flags** — countries where current affordability may not hold, based on the trajectory of house prices relative to the overall cost level.
+
+Explore the [live dashboard](https://eu-market-pulse-mcfmczf5fmzwtzuwwxjagm.streamlit.app) for the current ranking, regional filters, and country-by-country comparison.
 
 ## Methodology Highlight: Forecasting
 
 A linear trend model was tested to forecast future inflation, but was deliberately excluded from the final analysis after validation showed the short post-2022 recovery period does not provide a statistically reliable signal (see `notebooks/05_forecasting.ipynb` for the full exploration, including the three approaches tested and why each was rejected). The project's core business question remains fully answered by the historical KPI scoring and SQL analysis, which don't depend on forward projection.
 
-
 ## Project Structure
 
-​```
+```
 eu-market-pulse/
 ├── app/                  → Streamlit dashboard
 ├── data/
@@ -60,7 +65,7 @@ eu-market-pulse/
 ├── sql/                  → schema and analytical queries
 ├── src/                  → production pipeline script (Eurostat → Supabase)
 └── .github/workflows/    → GitHub Actions automation
-​```
+```
 
 ## Data Sources & Limitations
 
@@ -79,4 +84,4 @@ This project was developed with Claude (Anthropic) as an AI pair-programming and
 
 ---
 
-**Gabriel Souza** — [LinkedIn] https://www.linkedin.com/in/gabriel-souza-5bb6123a8/ · [GitHub] https://github.com/gabriel-souza-data
+**Gabriel Souza** — [LinkedIn](https://linkedin.com/in/o-teu-perfil) · [GitHub](https://github.com/gabriel-souza-data)
