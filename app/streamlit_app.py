@@ -190,6 +190,7 @@ else:
 
     trends = load_trends()
     trends_compare = trends.merge(df_compare[['country_code', 'country_name']], on='country_code')
+    trends_compare = trends_compare.sort_values(['country_name', 'year'])
 
     fig_trend = px.line(
         trends_compare,
