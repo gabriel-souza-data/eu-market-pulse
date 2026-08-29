@@ -47,10 +47,10 @@ COUNTRY_COLORS = {
     'United Kingdom': '#1f77b4', 'Switzerland': '#ff7f0e', 'Ireland': '#2ca02c',
     'Germany': '#d62728', 'France': '#9467bd', 'Netherlands': '#8c564b',
     'Austria': '#e377c2', 'Belgium': '#7f7f7f', 'Portugal': '#bcbd22',
-    'Spain': '#17becf', 'Italy': '#393b79', 'Greece': '#ad494a',
-    'Poland': '#31a354', 'Romania': '#e6550d', 'Hungary': '#756bb1',
-    'Czechia': '#636363', 'Sweden': '#a55194', 'Denmark': '#8ca252',
-    'Finland': '#3182bd'
+    'Spain': '#17becf', 'Italy': '#aec7e8', 'Greece': '#ffbb78',
+    'Poland': '#98df8a', 'Romania': '#ff9896', 'Hungary': '#c5b0d5',
+    'Czechia': '#c49c94', 'Sweden': '#f7b6d2', 'Denmark': '#dbdb8d',
+    'Finland': '#9edae5'
 }
 
 # ── Header ────────────────────────────────────────────────────────
