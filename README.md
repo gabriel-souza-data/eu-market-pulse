@@ -46,18 +46,21 @@ Streamlit: public dashboard
 
 A linear trend model was tested to forecast future inflation, but was deliberately excluded from the final analysis after validation showed the short post-2022 recovery period does not provide a statistically reliable signal (see `notebooks/05_forecasting.ipynb` for the full exploration, including the three approaches tested and why each was rejected). The project's core business question remains fully answered by the historical KPI scoring and SQL analysis, which don't depend on forward projection.
 
+
 ## Project Structure
 
+​```
 eu-market-pulse/
-├── app/ → Streamlit dashboard
+├── app/                  → Streamlit dashboard
 ├── data/
-│ ├── raw/ → original Eurostat downloads
-│ └── processed/ → cleaned, analysis-ready CSVs
-├── images/ → exported charts
-├── notebooks/ → step-by-step analysis (cleaning, EDA, Supabase prep, forecasting)
-├── sql/ → schema and analytical queries
-├── src/ → production pipeline script (Eurostat → Supabase)
-└── .github/workflows/ → GitHub Actions automation
+│   ├── raw/              → original Eurostat downloads
+│   └── processed/        → cleaned, analysis-ready CSVs
+├── images/               → exported charts
+├── notebooks/            → step-by-step analysis (cleaning, EDA, Supabase prep, forecasting)
+├── sql/                  → schema and analytical queries
+├── src/                  → production pipeline script (Eurostat → Supabase)
+└── .github/workflows/    → GitHub Actions automation
+​```
 
 ## Data Sources & Limitations
 

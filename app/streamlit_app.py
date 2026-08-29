@@ -161,23 +161,30 @@ if len(compare_countries) < 2:
 else:
     df_compare = df[df['country_name'].isin(compare_countries)]
 
+    df_melted = df_compare.melt(
+        id_vars='country_name',
+        value_vars=['cost_of_living_score', 'inflation_stability_score', 'housing_pressure_score'],
+        var_name='dimension',
+        value_name='score'
+    )
+    # Visual-only floor so zero-value bars remain visible; the label still shows the true score
+    df_melted['bar_height'] = df_melted['score'].apply(lambda x: max(x, 3))
+
     fig_compare = px.bar(
-        df_compare.melt(
-            id_vars='country_name',
-            value_vars=['cost_of_living_score', 'inflation_stability_score', 'housing_pressure_score'],
-            var_name='dimension',
-            value_name='score'
-        ),
+        df_melted,
         x='dimension',
-        y='score',
+        y='bar_height',
         color='country_name',
         color_discrete_map=COUNTRY_COLORS,
         barmode='group',
-        labels={'dimension': '', 'score': 'Score (0-100, higher = more favorable)', 'country_name': 'Country'},
+        text=df_melted['score'].round(1),
+        labels={'dimension': '', 'bar_height': 'Score (0-100, higher = more favorable)', 'country_name': 'Country'},
         height=450
     )
+    fig_compare.update_traces(textposition='outside')
     fig_compare.update_xaxes(ticktext=['Cost of Living', 'Inflation Stability', 'Housing Pressure'], 
                               tickvals=['cost_of_living_score', 'inflation_stability_score', 'housing_pressure_score'])
+    fig_compare.update_layout(yaxis_range=[0, 110])
 
     st.plotly_chart(fig_compare, use_container_width=True)
 
