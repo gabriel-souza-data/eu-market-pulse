@@ -21,6 +21,9 @@ This project answers that trade-off directly, scoring 19 European countries acro
 - **Supabase** — cloud-hosted Postgres database
 - **GitHub Actions** — automated weekly data pipeline (Eurostat API → cleaning → database upsert)
 - **Streamlit** — public, interactive dashboard
+- **Claude (Anthropic)** — AI-assisted development — code review, debugging and documentation
+
+AI-assisted development (Claude) supported code review, debugging, and documentation; all analysis, business decisions, and final outputs are my own.
 
 ## Pipeline Overview
 
@@ -78,10 +81,6 @@ Data is sourced from [Eurostat](https://ec.europa.eu/eurostat)'s public API:
 - The United Kingdom is excluded from the Cost of Living and Overall Expansion scores, as Eurostat's price level data for the UK stops in 2019.
 - Switzerland and the United Kingdom are excluded from the House Price Index, which Eurostat does not cover for these two countries.
 
-## AI Development Partner
 
-This project was developed with Claude (Anthropic) as an AI pair-programming and analytical partner — used for code review, debugging (including resolving local network/firewall issues affecting the Streamlit development environment), and structured decision-making throughout the pipeline (e.g. dataset selection, KPI design, and the decision to exclude an unreliable forecasting model). All data analysis, business interpretation, and final decisions are my own.
-
----
-
-**Gabriel Souza** — [LinkedIn](https://linkedin.com/in/o-teu-perfil) · [GitHub](https://github.com/gabriel-souza-data)
+**Gabriel Souza** — Data analyst Lisbon, Portugal · 2026
+LinkedIn: https://www.linkedin.com/in/gabriel-souza-5bb6123a8/ GitHub: https://github.com/gabriel-souza-data
