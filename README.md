@@ -82,5 +82,8 @@ Data is sourced from [Eurostat](https://ec.europa.eu/eurostat)'s public API:
 - Switzerland and the United Kingdom are excluded from the House Price Index, which Eurostat does not cover for these two countries.
 
 
+## Author
+
+
 **Gabriel Souza** — Data analyst Lisbon, Portugal · 2026
 LinkedIn: https://www.linkedin.com/in/gabriel-souza-5bb6123a8/ GitHub: https://github.com/gabriel-souza-data
