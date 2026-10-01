@@ -2,7 +2,7 @@
 
 **Where should a remote-first company expand or hire in Europe, based on cost of living and inflation trends?**
 
-🔗 **[Live Dashboard](https://eu-market-pulse-mcfmczf5fmzwtzuwwxjagm.streamlit.app)**
+🔗 **[Live Dashboard](hhttps://eu-market-pulse-83kglsxcysnvfwztqfs84i.streamlit.app)**
 
 ![Dashboard Preview](images/expansion_score_ranking.png)
 
@@ -49,7 +49,7 @@ Rather than listing a fixed ranking here — which would go stale as the pipelin
 - **Trade-off patterns** — for example, whether the cheapest countries in a given period are also the least stable, or whether any country combines both low cost and strong stability.
 - **Housing risk flags** — countries where current affordability may not hold, based on the trajectory of house prices relative to the overall cost level.
 
-Explore the [live dashboard](https://eu-market-pulse-mcfmczf5fmzwtzuwwxjagm.streamlit.app) for the current ranking, regional filters, and country-by-country comparison.
+Explore the [live dashboard](https://eu-market-pulse-83kglsxcysnvfwztqfs84i.streamlit.app) for the current ranking, regional filters, and country-by-country comparison.
 
 ## Methodology Highlight: Forecasting
 
