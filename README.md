@@ -2,7 +2,7 @@
 
 **Where should a remote-first company expand or hire in Europe, based on cost of living and inflation trends?**
 
-🔗 **[Live Dashboard](hhttps://eu-market-pulse-83kglsxcysnvfwztqfs84i.streamlit.app)**
+🔗 **[Live Dashboard](https://eu-market-pulse-83kglsxcysnvfwztqfs84i.streamlit.app)**
 
 ![Dashboard Preview](images/expansion_score_ranking.png)
 
